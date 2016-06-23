@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 import {createUserWithEmailAndPassword} from '../../actions/authActions';
 import RegistrationForm from './RegistrationForm';
 import toastr from 'toastr';
+import checkAuth from '../checkAuth';
 
 export class RegistrationPage extends React.Component {
   constructor(props, context) {
@@ -71,4 +72,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegistrationPage);
+export default connect(mapStateToProps, mapDispatchToProps)(checkAuth(RegistrationPage, false));

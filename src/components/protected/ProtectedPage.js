@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
-import checkAuth from '../requireAuth';
+import checkAuth from '../checkAuth';
+
 const ProtectedPage = () => {
   return (
     <div>

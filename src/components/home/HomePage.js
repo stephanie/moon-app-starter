@@ -1,12 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router';
+import GuestHomeView from './GuestHomeView'
+import UserHomeView from './UserHomeView'
 
 const HomePage = () => {
   return (
-    <div className="jumbotron">
-      <h1>React Redux Firebase Starter</h1>
-      <p>This is an starter project to make your life easier</p>
-      <Link to="about" className="btn btn-primary btn-lg">Learn more</Link>
+    <div className="main-content">
+      <GuestHomeView/>
+      <UserHomeView/>
     </div>
   );
 };

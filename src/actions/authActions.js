@@ -90,7 +90,7 @@ export function signOut() {
       .then(
         () => {
           dispatch(authLoggedOutSuccess());
-          if (getState().routesPermissions.requireAuth
+          if (getState().routesPermissions.checkAuth
               .filter(route => route === getState().routing.locationBeforeTransitions.pathname).toString()) {
             dispatch(push('/'));
           }
@@ -114,7 +114,7 @@ function redirect(replace, pathname, nextPathName, error = false) {
   }
 }
 
-export function requireAuth(nextState, replace) {
+export function checkAuth(nextState, replace) {
   return (dispatch, getState) => {
     if (!getState().auth.isLogged) {
       redirect(replace, '/login', nextState.location.pathname, 'You need to be logged to access this page');

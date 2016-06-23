@@ -1,6 +1,6 @@
 export default {
   routesPermissions: {
-    requireAuth: [
+    checkAuth: [
       '/admin'
     ],
     routesRequireAdmin: [

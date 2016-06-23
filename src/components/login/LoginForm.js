@@ -1,5 +1,6 @@
 import React from 'react';
 import TextInput from '../common/TextInput';
+import RegisterLink from '../common/RegisterLink';
 
 const LoginForm = ({user, onSave, onChange, saving}) => {
   return (
@@ -22,9 +23,11 @@ const LoginForm = ({user, onSave, onChange, saving}) => {
       <input
         type="submit"
         disabled={saving}
-        value={saving ? 'Logining in...' : 'Login'}
+        value={saving ? 'Logging in...' : 'Login'}
         className="btn btn-primary"
         onClick={onSave}/>
+      
+      <RegisterLink/>
     </form>
   );
 };
