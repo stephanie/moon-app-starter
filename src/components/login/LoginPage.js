@@ -34,7 +34,7 @@ export class RegistrationPage extends React.Component {
     this.props.actions.signInWithEmailAndPassword(this.state.user)
       .then(user => {
         toastr.success('You are logged in');
-        window.location.reload();
+        window.location.reload(); //hack to refresh homepage
       }).catch(error => {
         toastr.error(error.message);
         this.setState({saving: false});
